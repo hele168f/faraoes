@@ -1,0 +1,133 @@
+---
+---
+
+<article>
+  <div class="product">
+    <img src="https://placehold.co/600x800" alt="Billede af produkt" />
+  </div>
+  <div class="single">
+    <div class="single-title">
+      <h1>Navn - Jumbobog 524</h1>
+      <h2>undertitel - Stålandens hemmelighed</h2>
+    </div>
+
+    <div class="interaction"></div>
+
+    <div class="single_descripton">
+      <p>
+        En eller anden beskrivende tekst om dette, hvor man kan blive lidt
+        teaset til at købe produktet. Blah blah blah blah blah blah blah blah
+        blah blah. læs mere
+      </p>
+    </div>
+
+    <div class="single-grid-1">
+      <h2>DKK 129,-</h2>
+      <p>Afsendelse: 2-4 hverdage</p>
+    </div>
+    <div class="single-grid-2">
+      <div id="counter" class="counter">
+        <button onclick="decrementCounter()" class="counter-btn">-</button>
+        <span id="counter-value" class="counter-value">0</span>
+        <button onclick="incrementCounter()" class="counter-btn">+</button>
+      </div>
+      <button> Læg i kurv</button>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 700px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    background-color: white;
+  }
+  img {
+    width: 100%;
+  }
+  .product {
+    place-content: center;
+  }
+  .single {
+    max-width: 500px;
+    margin-inline: auto;
+    padding: 20px;
+  }
+  .single-title {
+    margin-bottom: 64px;
+  }
+  .single_descripton {
+    margin-bottom: 64px;
+  }
+  .single-grid-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    margin-bottom: 16px;
+  }
+  .single-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+  }
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 2.441rem;
+    margin-bottom: -3%;
+  }
+  h2 {
+    font-size: 1.953rem;
+  }
+
+  p {
+    font-size: 1rem;
+    max-width: 64vh;
+  }
+  .counter {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: solid grey;
+  }
+
+  .counter-btn {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .counter-value {
+    font-size: 20px;
+  }
+</style>
