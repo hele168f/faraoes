@@ -1,7 +1,7 @@
 ---
 
 ---
-<article class="card">
+<!-- <article class="card">
     <div class="card_body">
         <img src="#" alt="">
         <p>Navn</p>
@@ -23,39 +23,75 @@
     
     
     
-</article>
+</article> -->
+<div class="card">
+    <img src="billede.jpg" alt="Billede af produkt">
+    <h3>Produktnavn</h3>
+    <h4>Beskrivelse af produkt</h4>
+    <p class="pris">599 kr.</p>
+    <div class="info">
+      <p>På lager</p>
+      <p>3-4 hverdage</p>
+    </div>
+    <button class="knap">Læg i kurv</button>
+  </div>
 
 <style>
-    .card_body {
-        padding: 1.25rem;
-        flex: 1 1 auto;
-    }
-
-    .card_product_grid {
-        overflow: hidden;
-        height: 100%;
-    }
-
-    .card_product_grid_1 {
-        border-top: 1px solid grey;
-        display: block;
-    }
-    button {
-        background-color: green;
-        width: 100%;
-    }
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-    }
     .card {
-        flex-direction: column;
-        display: flex;
-        background-color: #FFFFFF;
-        position: relative;
-        width: fit-content;
-        padding-right: 10px;
-        padding-left: 10px;
-    }
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #FFFFFF;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.card h4 {
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+.card .pris {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.card .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-top: 1px solid grey;
+}
+
+.card .knap {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card .knap:hover {
+  background-color: #3e8e41;
+}
+
 </style>
