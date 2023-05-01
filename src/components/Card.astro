@@ -1,0 +1,61 @@
+---
+
+---
+<article class="card">
+    <div class="card_body">
+        <img src="#" alt="">
+        <p>Navn</p>
+        <p>undertitel</p>
+        <p>pris</p>
+    </div>
+
+    <div class="card_product_grid_1">
+        <div class="row">
+            <p>lagerstatus</p>
+            <p>levering</p>
+        </div>
+        
+    </div>
+
+    <div class="card_product_grid_2">
+        <button>Læg i kurv</button>
+    </div>
+    
+    
+    
+</article>
+
+<style>
+    .card_body {
+        padding: 1.25rem;
+        flex: 1 1 auto;
+    }
+
+    .card_product_grid {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .card_product_grid_1 {
+        border-top: 1px solid grey;
+        display: block;
+    }
+    button {
+        background-color: green;
+        width: 100%;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .card {
+        flex-direction: column;
+        display: flex;
+        background-color: #FFFFFF;
+        position: relative;
+        width: fit-content;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+</style>
