@@ -1,7 +1,9 @@
 ---
 import Card from "../components/Card.astro";
 import Single from "../components/Single.astro";
+import Button from "../components/Button.astro";
 import svgReference from "./farver.svg";
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -32,6 +34,7 @@ import svgReference from "./farver.svg";
       <h2>Indholdselementer</h2>
       <h3>Knapper</h3>
       <div class="content">
+        <Button />
         <div style="background-color: #FFFFFF;">Primær</div>
         <div style="background-color: #FFFFFF;">Primær hover</div>
         <div style="background-color: #FFFFFF;">Sekundær</div>

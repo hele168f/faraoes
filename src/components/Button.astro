@@ -1,0 +1,31 @@
+---
+const { variant, href } = Astro.props;
+
+const Tag = href ? "a" : "button";
+
+// let Tag = "button";
+
+// if (href) {
+//   Tag = "a";
+// }
+---
+
+<Tag data-variant={variant} {href}>
+  <slot />
+</Tag>
+
+<style>
+  a,
+  button {
+    padding: 1rem;
+  }
+
+  [data-variant="primary"] {
+    background: var(--colorPrimaryButton);
+    color: #fff;
+  }
+  [data-variant="secondary"] {
+    color: var(--secondary-color);
+    background: #fff;
+  }
+</style>
