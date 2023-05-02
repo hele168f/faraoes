@@ -2,6 +2,97 @@
 
 ---
 
-<article>
-    <img src="https://placehold.co/600x600" alt="Billede af produkt" />
-</article>
+<div class="container">
+    <div class="left-column">
+        <img src="https://via.placeholder.com/400x400" alt="Billede af butik">
+    </div>
+    <div class="">
+        <h4 class="h4">Find butik</h4>
+        <div class="box1">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="8" cy="8" r="6" stroke="#333" stroke-width="2"/>
+                <path d="M14.375 14.375L18.125 18.125" stroke="#333" stroke-width="2"/>
+                <path d="M10.5 6C10.5 7.933 8.933 9.5 7 9.5C5.067 9.5 3.5 7.933 3.5 6C3.5 4.067 5.067 2.5 7 2.5C8.933 2.5 10.5 4.067 10.5 6Z" stroke="#333" stroke-width="2"/>
+              </svg>
+            find butik</div>
+        <p>3 resultater inde for 10 km</p>
+        <div class="lokation">
+            <div class="box">
+            <div class="circle"></div>
+            <div>
+              <p>København K</p>  
+              <p>Vimmelskaftet 47-49
+                1161 København K</p>
+            </div>
+            
+            <div class="plus">+</div>
+        </div>
+
+        <div class="box">
+            <div class="circle"></div>
+            <div>
+                <p>København Ø</p>  
+                <p>Vimmelskaftet 47-49
+                  1161 København K</p>
+              </div>
+            <div class="plus">+</div>
+        </div>
+        </div>
+        
+        
+    </div>
+    
+</div>
+
+
+
+<style>
+
+    .h4{
+        margin-top: 0;
+    }
+    .container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 20px;
+			padding: 20px;
+		}
+		.right-column {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 10px;
+		}
+		.box {
+			background-color: #FFFFFF;
+			padding: 20px;
+			text-align: left;
+            display: flex;
+            justify-content: space-around;  
+            margin-bottom: 8px;
+		}
+
+        .box1 {
+			background-color: #FFFFFF;
+			padding: 20px;
+			text-align: left;
+            margin-bottom: 8px;
+		}
+
+        
+
+        .circle {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid;
+        }
+		.left-column img {
+			width: 100%;
+			height: auto;
+		}
+
+
+        
+
+       
+</style>
