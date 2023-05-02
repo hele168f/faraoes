@@ -46,4 +46,7 @@
   --colorBorder: #323232;
   --colorBackgroundContainer: #afafaf;
   --colorPrimaryButton: #1b6f2e;
+  --colorPrimaryButtonHover: #228c3a;
+  --colorSecondaryButton: #1e4a81;
+  --colorSecondaryButtonHover: #2861ab;
 }
