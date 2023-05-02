@@ -1,6 +1,8 @@
 ---
 import Card from "../components/Card.astro";
 import Single from "../components/Single.astro";
+import Button from "../components/Button.astro";
+import svgReference from "./farver.svg";
 import "../styles/global.css";
 ---
 
@@ -13,101 +15,121 @@ import "../styles/global.css";
     <title>Astro</title>
   </head>
   <body>
-	<main>
-		<h1>Komponent Bibliotek</h1>
-    <h2>Farvepalette</h2>
-    <div class="color-palette">
-      <div style="background-color: #FFFFFF;">Primær farve</div>
-      <div style="background-color: #1B6F2E;">Placeholder</div>
-      <div style="background-color: #2861AB;">Placeholder</div>
-      <div style="background-color: #D54A41;">Placeholder</div>
-      <div style="background-color: #D54A41;">Placeholder</div>
-    </div>
-    <h2>Typografi Hierarki</h2>
-    <div>
-      <!-- Plads til at tilføje en masse skrifttyper -->
-    </div>
-    <h2>Indholdselementer</h2>
-	<h3>Knapper</h3>
-    <div class="content">
-      <div style="background-color: #FFFFFF;">Primær</div>
-      <div style="background-color: #FFFFFF;">Primær hover</div>
-      <div style="background-color: #FFFFFF;">Sekundær</div>
-      <div style="background-color: #FFFFFF;">Sekundær hover</div>
-	  <div style="background-color: #FFFFFF;">Sekundær hover</div>
-	  <div style="background-color: #FFFFFF;">Sekundær hover</div>
-    </div>
-	<h3>Cards</h3>
-	<div class="content">
-      <div> State x<Card /></div>
-      <div> State x<Card /></div>
-      <div> State x<Card /></div>
-    </div>
+    <main>
+      <h1>Komponent Bibliotek</h1>
+      <h2>Farvepalette</h2>
+      <div class="color-palette">
+        <img src="src/farver.svg" alt="farver" />
+      </div>
+      <h2>Typografi Hierarki</h2>
+      <div class="type">
+        <h1>faros cigarros</h1>
+        <h2>faros cigarros</h2>
+        <h3>faros cigarros</h3>
+        <h4>faros cigarros</h4>
+        <h5>faros cigarros</h5>
+        <p>faros cigarros</p>
+        <h6>faros cigarros</h6>
+      </div>
+      <h2>Indholdselementer</h2>
+      <h3>Knapper</h3>
+      <div class="content">
+        <Button href="/" variant="primary">Home</Button>
+        <div style="background-color: #FFFFFF;">Primær</div>
+        <div style="background-color: #FFFFFF;">Primær hover</div>
+        <div style="background-color: #FFFFFF;">Sekundær</div>
+        <div style="background-color: #FFFFFF;">Sekundær hover</div>
+        <div style="background-color: #FFFFFF;">Sekundær hover</div>
+        <div style="background-color: #FFFFFF;">Sekundær hover</div>
+      </div>
+      <h3>Cards</h3>
+      <div class="content">
+        <div>State x<Card /></div>
+        <div>State x<Card /></div>
+        <div>State x<Card /></div>
+      </div>
 
-	<h3>Single view</h3>
-	<div class="content_single">
-      <div> State x<Single /></div>
-    </div>
+      <h3>Single view</h3>
+      <div class="content_single">
+        <div>State x<Single /></div>
+      </div>
 
-	<h3>Grids og spacing</h3>
-	<h4>Pattern Library</h4>
-	<div class="content">
-		
-		<div style="background-color: #FFFFFF;">Placeholder</div>
-		<div style="background-color: #FFFFFF;">Placeholder</div>
-		<div style="background-color: #FFFFFF;">Placeholder</div>
-		
-    </div>
-	<h4>Visning med rem/px</h4>
-	<div class="content">
-		<div style="background-color: #FFFFFF;">Placeholder</div>
-		<div style="background-color: #FFFFFF;">Placeholder</div>
-		<div style="background-color: #FFFFFF;">Placeholder</div>
-	</div>
-		
-	</main>
-    
+      <h3>Grids og spacing</h3>
+      <h4>Pattern Library</h4>
+      <div class="content">
+        <div style="background-color: #FFFFFF;">Placeholder</div>
+        <div style="background-color: #FFFFFF;">Placeholder</div>
+        <div style="background-color: #FFFFFF;">Placeholder</div>
+      </div>
+      <h4>Visning med rem/px</h4>
+      <div class="content">
+        <div style="background-color: #FFFFFF;">Placeholder</div>
+        <div style="background-color: #FFFFFF;">Placeholder</div>
+        <div style="background-color: #FFFFFF;">Placeholder</div>
+      </div>
+    </main>
   </body>
-  
 </html>
 
 <style>
-
   /* Centrer alt indhold */
   body {
-	background-color: #efefef;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   main {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-		
-      }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
 
-      /* Responsivt grid til farvepaletten */
-      .color-palette {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-        gap: 10px;
-        margin: 32px 0;
-      }
+  /* Responsivt grid til farvepaletten */
+  .color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+    margin: 32px 0;
+  }
 
-      /* Grids til indholdselementer */
-      .content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 32px;
-        margin: 32px 0;
-      }
-	  .content_single {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
-		gap: 32px;
-        margin: 32px 0;
-	  }
+  /* Grids til indholdselementer */
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    margin: 32px 0;
+  }
+  .content_single {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+    gap: 32px;
+    margin: 32px 0;
+  }
+  h1 {
+    font-size: 3.052rem;
+  }
+  h2 {
+    font-size: 2.441rem;
+  }
+  h3 {
+    font-size: 1.953rem;
+  }
+  h4 {
+    font-size: 1.563rem;
+  }
+  h5 {
+    font-size: 1.25rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.8rem;
+  }
+  .type {
+    margin-bottom: 64px;
+  }
 </style>
