@@ -1,4 +1,56 @@
 :root {
+  /* Farver */
+  --colorRed100: #e89b96;
+  --colorRed200: #df756e;
+  --colorRed300: #d54a41;
+  --colorRed400: #ac3931;
+  --colorRed500: #822b25;
+  --colorRed600: #5b1e1a;
+  --colorGreen100: #69c17d;
+  --colorGreen200: #2ea94a;
+  --colorGreen300: #228c3a;
+  --colorGreen400: #1b6f2e;
+  --colorGreen500: #145423;
+  --colorGreen600: #0e3a18;
+  --colorBlue100: #8fb2df;
+  --colorBlue200: #6796d3;
+  --colorBlue300: #3f7bc8;
+  --colorBlue400: #2861ab;
+  --colorBlue500: #1e4a81;
+  --colorBlue600: #153259;
+  --colorGray100: #afafaf;
+  --colorGray200: #949494;
+  --colorGray300: #7a7a7a;
+  --colorGray400: #616161;
+  --colorGray500: #494949;
+  --colorGray600: #323232;
+  --colorWhite: #ffffff;
+  --colorBlack: #000000;
+
+  /* Line height */
+  --body: 1.3;
+  --heading: 1.5;
+
+  /* Typografi */
+  --text4xl: 3.052 rem;
+  --text3xl: 2.441 rem;
+  --text2xl: 1.953 rem;
+  --textXl: 1.563 rem;
+  --textLg: 1.25 rem;
+  --textBase: 1 rem;
+  --textSm: 0.8 rem;
+  --textXs: 0.64 rem;
+  --textXxs: 0.512 rem;
+  --colorBackgroundButtonPrimary: #3f7bc8;
+  --colorText: #000000;
+  --colorBackgroundButtonPrimaryHover: #1e4a81;
+  --colorTextLink: #0e3a18;
+  --colorTextError: #d54a41;
+  --colorTextSucces: #228c3a;
+  --colorBackground: #ffffff;
+  --colorBorder: #323232;
+  --colorBackgroundContainer: #afafaf;
+
   --colorRed100: #e89b96;
   --colorRed200: #df756e;
   --colorRed300: #d54a41;

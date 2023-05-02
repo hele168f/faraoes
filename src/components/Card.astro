@@ -1,29 +1,7 @@
 ---
 
 ---
-<!-- <article class="card">
-    <div class="card_body">
-        <img src="#" alt="">
-        <p>Navn</p>
-        <p>undertitel</p>
-        <p>pris</p>
-    </div>
 
-    <div class="card_product_grid_1">
-        <div class="row">
-            <p>lagerstatus</p>
-            <p>levering</p>
-        </div>
-        
-    </div>
-
-    <div class="card_product_grid_2">
-        <button>Læg i kurv</button>
-    </div>
-    
-    
-    
-</article> -->
 <div class="card">
     <img src="https://placehold.co/600x800" alt="Billede af produkt">
     <p class="produkt">Produktnavn</p>
@@ -38,14 +16,13 @@
 
 <style>
     .card {
-  border-radius: 10px;
+  border-radius: var();
   padding: 20px;
   transition: 0.3s;
   max-width: 300px;
   margin: auto;
   text-align: left;
-  font-family: Arial, sans-serif;
-  background-color: #FFFFFF;
+  background-color: var(--colorBackground);
 
 }
 
@@ -79,7 +56,7 @@
 }
 
 .card .knap {
-  background-color: #4CAF50;
+  background-color: var(--colorGreen400);
   color: white;
   padding: 10px;
   border: none;
