@@ -1,4 +1,5 @@
 :root {
+    /* Farver */
     --colorRed100: #E89B96;
     --colorRed200: #DF756E;
     --colorRed300: #D54A41;
@@ -25,8 +26,12 @@
     --colorGray600: #323232;
     --colorWhite: #FFFFFF;
     --colorBlack: #000000;
+
+    /* Line height */
     --body: 1.3;
     --heading: 1.5;
+
+    /* Typografi */
     --text4xl: 3.052 rem;
     --text3xl: 2.441 rem;
     --text2xl: 1.953 rem;
