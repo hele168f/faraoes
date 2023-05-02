@@ -12,7 +12,10 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Komponent bibliotek</title>
   </head>
   <body>
     <main>
@@ -23,13 +26,13 @@ import "../styles/global.css";
       </div>
       <h2>Typografi Hierarki</h2>
       <div class="type">
-        <h1>faros cigarros</h1>
-        <h2>faros cigarros</h2>
-        <h3>faros cigarros</h3>
-        <h4>faros cigarros</h4>
-        <h5>faros cigarros</h5>
-        <p>faros cigarros</p>
-        <h6>faros cigarros</h6>
+        <h1>faraos cigarer</h1>
+        <h2>faraos cigarer</h2>
+        <h3>faraos cigarer</h3>
+        <h4>faraos cigarer</h4>
+        <h5>faraos cigarer</h5>
+        <p>faraos cigarer</p>
+        <h6>faraos cigarer</h6>
       </div>
       <h2>Indholdselementer</h2>
       <h3>Knapper</h3>
@@ -41,9 +44,44 @@ import "../styles/global.css";
       </div>
       <h3>Cards</h3>
       <div class="content">
-        <div>State x<Card /></div>
-        <div>State x<Card /></div>
-        <div>State x<Card /></div>
+        <div>På Lager<Card 
+		imgPath="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/Comic_1.webp"
+        title="Iron Man - The invincible"
+        beskrivelse="Udgave 37"
+		pris="DKK 129,-"
+		status="På lager"
+		button="Læg i kurv"
+		levering="1-2 hverdage"
+		  />
+		</div>
+
+		<div>Udsolgt - mulighed fo resavation<Card 
+		imgPath="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/Comic_2.webp"
+		title="Batman - Reborn"
+		beskrivelse="Udgave 420"
+		pris="DKK 139,-"
+		status="Udsolgt"
+		button="Resever"
+		levering="7-10 hverdage"
+			  />
+			</div>
+
+		<div>Udsolgt - ikke muligt at resavere<Card 
+		imgPath="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/Comic_3.webp"
+		title="Moon Knight - The Legend"
+		beskrivelse="Udgave 69"
+		pris="DKK 89,-"
+		status="Udsolgt"
+		button="Kommer snart"
+		levering="1-2 hverdage"
+				  />
+				</div>
+
+		<!-- <PlaylistCard
+          imgPath="https://picsum.photos/id/14/350/350.webp"
+          title="Peaceful Piano"
+          body="Relax and indulge with beautiful piano pieces"
+        /> -->
       </div>
 
       <h3>Single view</h3>
@@ -120,9 +158,7 @@ import "../styles/global.css";
   h5 {
     font-size: 1.25rem;
   }
-  p {
-    font-size: 1rem;
-  }
+
   h6 {
     font-size: 0.8rem;
   }
