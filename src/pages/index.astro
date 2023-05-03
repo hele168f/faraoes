@@ -1,13 +1,13 @@
 ---
 import Card from "../components/Card.astro";
 import Single from "../components/Single.astro";
+import Single1 from "../components/Single.astro";
 import Button from "../components/Button.astro";
 import Store from "../components/Store.astro";
 import svgReference from "./farver.svg";
 import "../styles/global.css";
 import Type from "../components/Type.astro";
 import Type1 from "../components/Type1.astro";
-
 ---
 
 <html lang="en">
@@ -32,30 +32,19 @@ import Type1 from "../components/Type1.astro";
         <img src="src/farver.svg" alt="farver" />
       </div>
       <h2>Typografi Hierarki</h2>
-      <div class="type">
-        <Type as="h4" level="4xl">faraos cigarer</Type>
-        <h1>faraos cigarer</h1>
-        <h2>faraos cigarer</h2>
-        <h3>faraos cigarer</h3>
-        <h4>faraos cigarer</h4>
-        <h5>faraos cigarer</h5>
-        <p>faraos cigarer</p>
-        <h6>faraos cigarer</h6>
+
+      <div>
+        <Type1
+          h1="faraos cigarer"
+          h2="faraos cigarer"
+          h3="faraos cigarer"
+          h4="faraos cigarer"
+          h5="faraos cigarer"
+          h6="faraos cigarer"
+          p="faraos cigarer"
+        />
       </div>
 
-	  <div>
-		<Type1 
-		h1="faraos cigarer"
-		h2="faraos cigarer"
-		h3="faraos cigarer"
-		h4="faraos cigarer"
-		h5="faraos cigarer"
-		h6="faraos cigarer"
-		p="faraos cigarer"
-		/>
-	  </div>
-
-	  
       <h2>Indholdselementer</h2>
       <h3>Knapper</h3>
       <div class="content">
@@ -106,6 +95,17 @@ import Type1 from "../components/Type1.astro";
       <h3>Single view</h3>
       <div class="content_single">
         <div>State x<Single /></div>
+        <div>
+          State x<Single1
+            imgPath="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/Comic_3.webp"
+            title="Moon Knight - The Legend"
+            beskrivelse="Udgave 69"
+            pris="DKK 89,-"
+            status="Udsolgt"
+            button="Kommer snart"
+            levering="1-2 hverdage"
+          />
+        </div>
       </div>
 
       <h3>Butikker og åbningstider-siderne</h3>
@@ -138,7 +138,7 @@ import Type1 from "../components/Type1.astro";
     display: flex;
     align-items: center;
     justify-content: center;
-	font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   main {
     flex-direction: column;
@@ -169,28 +169,4 @@ import Type1 from "../components/Type1.astro";
     gap: 32px;
     margin: 32px 0;
   }
-  /*
-  h1 {
-    font-size: 3.052rem;
-  }
-  h2 {
-    font-size: 2.441rem;
-  }
-  h3 {
-    font-size: 1.953rem;
-  }
-  h4 {
-    font-size: 1.563rem;
-  }
-  h5 {
-    font-size: 1.25rem;
-  }
-
-  h6 {
-    font-size: 0.8rem;
-  }
-  .type {
-    margin-bottom: 64px;
-  }
-  */
 </style>

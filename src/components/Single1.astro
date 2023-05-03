@@ -1,0 +1,101 @@
+---
+import Button from "../components/Button.astro";
+const { title, beskrivelse, pris, imgPath, button, levering } = Astro.props;
+---
+
+<div class="singleView">
+  <img src={imgPath} alt="" height="350" width="350" />
+
+  <p class="productTitle">{title}</p>
+  <p class="productUnder">{title}</p>
+
+  <p class="beskrivelse">{beskrivelse}</p>
+
+  <div class="info">
+    <p class="pris">{pris}</p>
+    <p class="levering">{levering}</p>
+  </div>
+
+  <div class="single-grid-2">
+    <div id="counter" class="counter">
+      <button onclick="decrementCounter()" class="counter-btn">-</button>
+      <span id="counter-value" class="counter-value">0</span>
+      <button onclick="incrementCounter()" class="counter-btn">+</button>
+    </div>
+    <div>
+      <button class="knap">{button}</button>
+    </div>
+  </div>
+
+  <style>
+    .singleView {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      max-width: 700px;
+      border-radius: 10px;
+      padding: 20px;
+      margin: auto;
+      background-color: white;
+    }
+    img {
+      width: 100%;
+      place-content: center;
+    }
+
+    .productTitle,
+    .productUnder {
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    .single_descripton {
+      margin-bottom: 64px;
+    }
+    .info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid grey;
+      margin-bottom: 16px;
+    }
+    .single-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .knap:hover {
+      background-color: #4caf50;
+    }
+
+    .counter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 120px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #000000;
+      border: solid grey;
+    }
+
+    .counter-btn {
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .counter-value {
+      font-size: 1rem;
+    }
+  </style>
+</div>
