@@ -13,6 +13,12 @@ const { title, beskrivelse, pris, imgPath, undertitel, button, levering } = Astr
         <p class="productUnder">{undertitel}</p>
     </div>
 
+    <div class="oenske">
+        <div class="liste">TILFØJ ØNSKELISTE</div>
+        <div class="favorit">TILFØJ SOM FAVORIT</div>
+        <div class="butik">FIND I BUTIK</div>
+    </div>
+
     <div class="interaction"></div>
 
     <div class="single_descripton">
@@ -48,12 +54,42 @@ const { title, beskrivelse, pris, imgPath, undertitel, button, levering } = Astr
   }
 
   .productTitle {
-    font-size: 36px;
+    font-size: 32px;
+    font-weight: 600;
     margin-top: 0;
+    margin-bottom: 8px;
+
+  }
+  .productUnder {
+    font-size: 26px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .beskrivelse {
+    font-size: 13px;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .oenske {
+    display: flex;
+    font-size: 12px;
+    gap: 32px;
+    margin-top: 0;
+    margin-bottom: 32px;
   }
   img {
     width: 100%;
   }
+
+  .pris {
+  margin-top: var(--cardStackLg);
+  margin-bottom: 0px;
+  font-size: 28px;
+  font-weight: bold;
+}
   .product {
     place-content: center;
   }
@@ -61,9 +97,7 @@ const { title, beskrivelse, pris, imgPath, undertitel, button, levering } = Astr
     max-width: 500px;
     margin-left: 31px;
   }
-  .single-title {
-    margin-bottom: 64px;
-  }
+ 
   .single_descripton {
     margin-bottom: 64px;
   }
@@ -81,19 +115,7 @@ const { title, beskrivelse, pris, imgPath, undertitel, button, levering } = Astr
     justify-content: space-between;
     align-items: center;
   }
-  /*
-  .knap {
-    background-color: #3e8e41;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 100%;
-    height: 40px;
-  }
-  */
+ 
   .knap:hover {
     background-color: #4caf50;
   }
