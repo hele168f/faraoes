@@ -125,18 +125,24 @@ import Type1 from "../components/Type1.astro";
       </article>
 
       <h3>Grids og spacing</h3>
-      <h4>Pattern Library</h4>
-      <div class="content">
-        <div style="background-color: #FFFFFF;">Placeholder</div>
-        <div style="background-color: #FFFFFF;">Placeholder</div>
-        <div style="background-color: #FFFFFF;">Placeholder</div>
-      </div>
-      <h4>Visning med rem/px</h4>
-      <div class="content">
-        <div style="background-color: #FFFFFF;">Placeholder</div>
-        <div style="background-color: #FFFFFF;">Placeholder</div>
-        <div style="background-color: #FFFFFF;">Placeholder</div>
-      </div>
+      
+      <h4>Pattern library visning i rem/px</h4>
+	  <p>Cards</p>
+      
+	  <div class="grid_billeder">
+		<img src="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/card_gap.webp" alt="Åbningstider">
+	  </div>
+
+	  <p>Singleview</p>
+	  <div class="grid_billeder">
+		<img src="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/single_view_gap.webp" alt="Åbningstider">
+	  </div>
+	  
+
+	  <p>Åbningstider</p>
+	  <div class="grid_billeder">
+		<img src="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/butik_gap.webp" alt="Åbningstider">
+	  </div>
     </main>
   </body>
 </html>
@@ -179,4 +185,11 @@ import Type1 from "../components/Type1.astro";
     gap: 32px;
     margin: 32px 0;
   }
+
+  .grid_billeder {
+	place-content: center;
+	display: flex;
+  }
+
+  
 </style>

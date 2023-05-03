@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="left-column">
-        <img src="https://via.placeholder.com/400x400" alt="Billede af butik">
+        <img src="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/maps.webp" alt="Billede af butik">
     </div>
     <div class="">
         <h4 class="h4">Find butik</h4>
@@ -15,7 +15,7 @@
                 <path d="M10.5 6C10.5 7.933 8.933 9.5 7 9.5C5.067 9.5 3.5 7.933 3.5 6C3.5 4.067 5.067 2.5 7 2.5C8.933 2.5 10.5 4.067 10.5 6Z" stroke="#333" stroke-width="2"/>
               </svg>
             find butik</div>
-        <p>3 resultater inde for 10 km</p>
+        <p class="lokation_text">3 resultater inde for 10 km</p>
         <div class="lokation">
             <div class="box">
             <div class="circle"></div>
@@ -25,6 +25,16 @@
                 1161 København K</p>
             </div>
             
+            <div class="plus">+</div>
+        </div>
+
+        <div class="box">
+            <div class="circle"></div>
+            <div>
+                <p>København Ø</p>  
+                <p>Vimmelskaftet 47-49
+                  1161 København K</p>
+              </div>
             <div class="plus">+</div>
         </div>
 
@@ -50,11 +60,13 @@
 
     .h4{
         margin-top: 0;
+        font-size: var(--text2xl);
+        margin-bottom: 16px;
     }
     .container {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			grid-gap: 20px;
+			grid-gap: 32px;
 			padding: 20px;
 		}
 		.right-column {
@@ -64,19 +76,26 @@
 		}
 		.box {
 			background-color: #FFFFFF;
-			padding: 20px;
+			padding: 32px;
 			text-align: left;
             display: flex;
             justify-content: space-around;  
-            margin-bottom: 8px;
+            margin-bottom: 16px;
+            border-radius: 16px;
 		}
 
         .box1 {
 			background-color: #FFFFFF;
 			padding: 20px;
 			text-align: left;
+            padding-block: 16px;
             margin-bottom: 8px;
+            border-radius: 16px;
 		}
+
+        .lokation_text {
+            margin-bottom: 64px;
+        }
 
         
 
