@@ -33,15 +33,15 @@
   --heading: 1.5;
 
   /* font størrelser */
-  --text4xl: 3.052 rem;
-  --text3xl: 2.441 rem;
-  --text2xl: 1.953 rem;
-  --textXl: 1.563 rem;
-  --textLg: 1.25 rem;
-  --textBase: 1 rem;
-  --textSm: 0.8 rem;
-  --textXs: 0.64 rem;
-  --textXxs: 0.512 rem;
+  --text4xl: 3.052rem;
+  --text3xl: 2.441rem;
+  --text2xl: 1.953rem;
+  --textXl: 1.563rem;
+  --textLg: 1.25rem;
+  --textBase: 1rem;
+  --textSm: 0.8rem;
+  --textXs: 0.64rem;
+  --textXxs: 0.512rem;
 
 
   /* spacing */
@@ -69,7 +69,7 @@
   /* Font family */
   --fontFamilyBody: Roboto;
   --fontFamiliesRoboto: Roboto;
-  
+
   --default: 1;
   --cardTextWeight: 700;
   --cardTextNormal: 400;
