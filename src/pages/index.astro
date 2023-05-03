@@ -29,32 +29,32 @@ import Type1 from "../components/Type1.astro";
       <h1>Komponent Bibliotek</h1>
       <h2>Farvepalette</h2>
       <div class="color-palette">
-        <img src="src/farver.svg" alt="farver" />
+        <img src="src/farver.svg" width="900" height="700" alt="farver" />
       </div>
       <h2>Typografi Hierarki</h2>
 
-      <div>
+      <div class="font-palette">
         <Type1
-          h1="faraos cigarer"
-          h2="faraos cigarer"
-          h3="faraos cigarer"
-          h4="faraos cigarer"
-          h5="faraos cigarer"
-          h6="faraos cigarer"
-          p="faraos cigarer"
+          h1="3.052rem/48.83px faraos cigarer (4xl)"
+          h2="2.441rem/ 36.06px faraos cigarer (3xl)"
+          h3="1.953rem/31.25px faraos cigarer (2xl)"
+          h4="1.563rem/25px faraos cigarer (xl)"
+          h5="1.25rem/20pxfaraos cigarer (lg)"
+          h6="1rem/16.00px faraos cigarer (base)"
+          p="0.8rem/12.80px faraos cigarer (sm)"
         />
       </div>
 
       <h2>Indholdselementer</h2>
       <h3>Knapper</h3>
-      <div class="content">
+      <div class="content_button">
         <Button href="/" variant="primary">Læg i kurv</Button>
         <Button href="/" variant="primaryHover">Læg i kurv</Button>
         <Button href="/" variant="secondary">Forudbestil</Button>
         <Button href="/" variant="secondaryHover">Forudbestil</Button>
       </div>
       <h3>Cards</h3>
-      <div class="content">
+      <div class="content_card">
         <div>
           På Lager<Card
             imgPath="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/Comic_1.webp"
@@ -62,31 +62,34 @@ import Type1 from "../components/Type1.astro";
             beskrivelse="Udgave 37"
             pris="DKK 129,-"
             status="På lager"
-            button="Læg i kurv"
+			button_tekst="Læg i kurv"
+			button_class="knap-lager"
             levering="1-2 hverdage"
           />
         </div>
 
         <div>
-          Udsolgt - mulighed fo resavation<Card
+          Udsolgt - mulighed fo resevation<Card
             imgPath="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/Comic_2.webp"
             title="Batman - Reborn"
             beskrivelse="Udgave 420"
             pris="DKK 139,-"
             status="Udsolgt"
-            button="Resever"
+            button_tekst="Resever"
+			button_class="knap-udsolgt"
             levering="7-10 hverdage"
           />
         </div>
 
         <div>
-          Udsolgt - ikke muligt at resavere<Card
+          Udsolgt - ikke muligt at reservere<Card
             imgPath="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/Comic_3.webp"
             title="Moon Knight - The Legend"
             beskrivelse="Udgave 69"
             pris="DKK 89,-"
             status="Udsolgt"
-            button="Kommer snart"
+            button_tekst="Kommer snart"
+			button_class="knap-snart"
             levering="1-2 hverdage"
           />
         </div>
@@ -94,7 +97,7 @@ import Type1 from "../components/Type1.astro";
 
       <h3>Single view</h3>
       <div class="content_single">
-        <div>State x<Single 
+        <div><Single 
 			imgPath="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/Comic_3.webp"
             title="Jumbobog 525"
 			undertitel="Blah blah"
@@ -105,7 +108,7 @@ import Type1 from "../components/Type1.astro";
             levering="1-2 hverdage"
 			/></div>
         <div>
-          State x<Single
+          <Single
             imgPath="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/Comic_2.webp"
             title="Moon Knight - The Legend"
 			undertitel="undertitel"
@@ -127,19 +130,19 @@ import Type1 from "../components/Type1.astro";
       <h3>Grids og spacing</h3>
       
       <h4>Pattern library visning i rem/px</h4>
-	  <p>Cards</p>
+	  <h5>Cards</h5>
       
 	  <div class="grid_billeder">
 		<img src="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/card_gap.webp" alt="Åbningstider">
 	  </div>
 
-	  <p>Singleview</p>
+	  <h5>Singleview</h5>
 	  <div class="grid_billeder">
 		<img src="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/single_view_gap.webp" alt="Åbningstider">
 	  </div>
 	  
 
-	  <p>Åbningstider</p>
+	  <h5>Åbningstider</h5>
 	  <div class="grid_billeder">
 		<img src="https://helenaadelaide.dk/kea/11_interfacedesign/faraos/billeder/butik_gap.webp" alt="Åbningstider">
 	  </div>
@@ -164,20 +167,67 @@ import Type1 from "../components/Type1.astro";
     padding: 0;
   }
 
+  h1 {
+	font-size: 48px;
+	display: flex;
+    place-content: center;
+  }
+
   /* Responsivt grid til farvepaletten */
   .color-palette {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     gap: 10px;
-    margin: 32px 0;
+	display: flex;
+    place-content: center;
+  }
+
+  .font-palette {
+    gap: 10px;
+	display: flex;
+    place-content: center;
+	margin-bottom: 128px;
+  }
+
+  h2 {
+	font-size: 36px;
+	margin-top: 64px;
+	color: var(--colorGray500);
+  }
+
+  h3 {
+	margin-top: 128px;
+	padding-left: 32px;
+	color: var(--colorGray500);
+	font-size: 28px;
+  }
+
+  h4 {
+	margin-top: 128px;
+	padding-left: 40px;
+	color: var(--colorGray500);
+	font-size: 2px;
+  }
+
+  h5 {
+	margin-top: 128px;
+	padding-left: 48px;
+	color: var(--colorGray500);
+	font-size: 18px;
   }
 
   /* Grids til indholdselementer */
-  .content {
+  .content_button {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    margin: 32px 0;
+	place-content: center;
+  }
+  .content_card {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 32px;
     margin: 32px 0;
+	
   }
   .content_single {
     display: grid;

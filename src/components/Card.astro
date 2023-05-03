@@ -1,5 +1,7 @@
 ---
-const { title, beskrivelse, pris, status, imgPath, button, levering } = Astro.props;
+import ButtonC from "../components/ButtonC.astro";
+const { title, beskrivelse, pris, status, imgPath, button_tekst, levering, button_class } = Astro.props;
+
 ---
 
 <div class="card">
@@ -15,7 +17,9 @@ const { title, beskrivelse, pris, status, imgPath, button, levering } = Astro.pr
         <p class="status">{status}</p>
         <p class="levering">{levering}</p>
     </div>
-    <button class="knap">{button}</button>
+    <button class={button_class}>{button_tekst}</button>
+
+    
 
   </div>
 
@@ -38,21 +42,23 @@ const { title, beskrivelse, pris, status, imgPath, button, levering } = Astro.pr
 .produkt {
   margin-top: var(--cardStackLg);
   margin-bottom: 0px;
-  font-size: var(--cardTitelText);
+  /* font-size: var(--cardTitelText); */
+  font-size: 18px;
+  font-weight: 500;
 
 }
 
 .beskrivelse {
   margin-top: var(--cardStackMd);
   margin-bottom: 0px;
-  font-size: 0.8em;
+  font-size: 16px;
 }
 
 
 .pris {
   margin-top: var(--cardStackLg);
   margin-bottom: 0px;
-  font-size: 1.2em;
+  font-size: 28px;
   font-weight: bold;
 }
 
@@ -63,9 +69,10 @@ const { title, beskrivelse, pris, status, imgPath, button, levering } = Astro.pr
   margin-top: 10px;
   border-top: 1px solid grey;
   opacity: var(--cardTextOpacity);
+  font-size: 16px;
 }
 
-.card .knap {
+.card .knap-lager {
   background-color: var(--colorGreen400);
   color: white;
   padding: 10px;
@@ -76,6 +83,32 @@ const { title, beskrivelse, pris, status, imgPath, button, levering } = Astro.pr
   cursor: pointer;
   width: 100%;
 }
+
+
+.card .knap-udsolgt {
+  background-color: var(--colorBlue400);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card .knap-snart {
+  background-color: var(--colorGray200);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+}
+
 
 .card .knap:hover {
   background-color: #3e8e41;
