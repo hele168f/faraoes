@@ -1,0 +1,39 @@
+---
+const { as, level } = Astro.props;
+
+const Tag = as;
+---
+
+<Tag class="type" data-level={level}>
+  <slot />
+</Tag>
+
+<style>
+  [data-level="4xl"] {
+    font-size: var(--text4xl);
+  }
+  [data-level="3xl"] {
+    font-size: var(--text3xl);
+  }
+  [data-level="2xl"] {
+    font-size: var(--text2xl);
+  }
+  [data-level="xl"] {
+    font-size: var(--textXl);
+  }
+  [data-level="lg"] {
+    font-size: var(--textLg);
+  }
+  [data-level="base"] {
+    font-size: var(--textBase);
+  }
+  [data-level="sm"] {
+    font-size: var(--textSm);
+  }
+  [data-level="xs"] {
+    font-size: var(--textXs);
+  }
+  [data-level="xxs"] {
+    font-size: var(--textXxs);
+  }
+</style>

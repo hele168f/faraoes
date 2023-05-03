@@ -1,4 +1,5 @@
 ---
+import Button from "../components/Button.astro";
 ---
 
 <article>
@@ -32,7 +33,7 @@
         <button onclick="incrementCounter()" class="counter-btn">+</button>
       </div>
       <div>
-        <button class="knap">Læg i kurv</button>
+        <Button href="/" variant="primary">Læg i kurv</Button>
       </div>
     </div>
   </div>
@@ -56,7 +57,6 @@
   }
   .single {
     max-width: 500px;
-    margin-inline: auto;
     padding: 20px;
   }
   .single-title {
@@ -79,6 +79,7 @@
     justify-content: space-between;
     align-items: center;
   }
+  /*
   .knap {
     background-color: #3e8e41;
     color: white;
@@ -90,6 +91,7 @@
     width: 100%;
     height: 40px;
   }
+  */
   .knap:hover {
     background-color: #4caf50;
   }
