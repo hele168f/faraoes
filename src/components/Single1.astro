@@ -1,13 +1,13 @@
 ---
 import Button from "../components/Button.astro";
-const { title, beskrivelse, pris, imgPath, button, levering } = Astro.props;
+const { title, beskrivelse, undertitel, pris, imgPath, button, levering } = Astro.props;
 ---
 
 <div class="singleView">
   <img src={imgPath} alt="" height="350" width="350" />
 
   <p class="productTitle">{title}</p>
-  <p class="productUnder">{title}</p>
+  <p class="productUnder">{undertitel}</p>
 
   <p class="beskrivelse">{beskrivelse}</p>
 

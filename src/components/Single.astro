@@ -1,30 +1,27 @@
 ---
 import Button from "../components/Button.astro";
+const { title, beskrivelse, pris, imgPath, undertitel, button, levering } = Astro.props;
 ---
 
 <article>
   <div class="product">
-    <img src="https://placehold.co/600x800" alt="Billede af produkt" />
+    <img src={imgPath} alt="" height="350" width="350" />
   </div>
   <div class="single">
     <div class="single-title">
-      <h1>Navn - Jumbobog 524</h1>
-      <h2>undertitel - Stålandens hemmelighed</h2>
+        <p class="productTitle">{title}</p>
+        <p class="productUnder">{undertitel}</p>
     </div>
 
     <div class="interaction"></div>
 
     <div class="single_descripton">
-      <p>
-        En eller anden beskrivende tekst om dette, hvor man kan blive lidt
-        teaset til at købe produktet. Blah blah blah blah blah blah blah blah
-        blah blah. læs mere
-      </p>
+        <p class="beskrivelse">{beskrivelse}</p>
     </div>
 
     <div class="single-grid-1">
-      <h2>DKK 129,-</h2>
-      <p>Afsendelse: 2-4 hverdage</p>
+        <p class="pris">{pris}</p>
+        <p class="levering">{levering}</p>
     </div>
     <div class="single-grid-2">
       <div id="counter" class="counter">
